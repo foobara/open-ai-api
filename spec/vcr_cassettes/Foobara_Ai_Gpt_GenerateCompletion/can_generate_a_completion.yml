@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"You
+        are like a scientist that answers questions very concisely and accurately."},{"role":"user","content":"What
+        is the PH of honey?"}]}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPEN_AI_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api.openai.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 10 Feb 2024 01:31:55 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-mocyfzfqtusxbnhm0zzkagsd
+      Openai-Processing-Ms:
+      - '1072'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '60000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '59956'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 44ms
+      X-Request-Id:
+      - req_e5411204c7bdb9ab702232fba9550d8b
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=2lR1poh75M5e6ktHClKtgR1FRngjpQCqsLtATyDyp6c-1707528715-1-AWGbywOdrJPid0pz0rPEw25hnqVD7mqJCW1bwQ2V7c5pQxhhmxsotq2VTnDFqAg8kMirGTGP3tcJZ4AFZOUax5I=;
+        path=/; expires=Sat, 10-Feb-24 02:01:55 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=6V52XylUCLBDMLvjBkH.88uRwMP6SzZ99NTt48Dkzbo-1707528715626-0-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 85309860c8867ae8-SJC
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-8qWVeXbqgAdXxpTpvbMofifzE6Xqa",
+          "object": "chat.completion",
+          "created": 1707528714,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "The pH of honey typically ranges between 3.9 and 6.1."
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 33,
+            "completion_tokens": 17,
+            "total_tokens": 50
+          },
+          "system_fingerprint": null
+        }
+  recorded_at: Sat, 10 Feb 2024 01:31:55 GMT
+recorded_with: VCR 6.2.0
