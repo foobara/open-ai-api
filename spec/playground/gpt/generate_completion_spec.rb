@@ -1,4 +1,4 @@
-RSpec.describe Foobara::Ai::Gpt::GenerateCompletion do
+RSpec.describe Foobara::OpenAiApi::GenerateCompletion do
   let(:inputs) do
     {
       api_token:,
@@ -26,7 +26,7 @@ RSpec.describe Foobara::Ai::Gpt::GenerateCompletion do
 
   it "can generate a completion", vcr: { record: :none } do
     expect(outcome).to be_success
-    expect(result).to be_a(Foobara::Ai::Gpt::Types::Completion)
+    expect(result).to be_a(Foobara::OpenAiApi::Types::Completion)
     expect(result.choices.first.message.content).to match(/pH of honey.*\d+\.\d+ and \d+\.\d+/)
   end
 end
