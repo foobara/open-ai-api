@@ -6,6 +6,13 @@ GIT
     foobara (0.0.1)
 
 GIT
+  remote: https://github.com/foobara/dotenv-loader.git
+  revision: 15bd91f9f7b2793c1766584e8661c87a5c81085d
+  specs:
+    foobara-dotenv-loader (0.1.0)
+      dotenv
+
+GIT
   remote: https://github.com/foobara/rubocop-rules.git
   revision: ea100ea86b708a441ef66ce0861dc72237316f2a
   specs:
@@ -44,6 +51,7 @@ GEM
       rexml
     diff-lcs (1.5.1)
     docile (1.4.0)
+    dotenv (3.1.0)
     ffi (1.16.3)
     formatador (1.1.0)
     guard (2.18.1)
@@ -151,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   foobara!
+  foobara-dotenv-loader!
   foobara-open-ai-api!
   foobara-rubocop-rules!
   foobara-spec-helpers!

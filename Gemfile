@@ -6,8 +6,6 @@ gemspec
 # TODO: move this to .gemspec
 gem "foobara", git: "foobara", branch: "main"
 
-# gem "foobara-dotenv-loader", github: "foobara/dotenv-loader"
-# gem "foobara-dotenv-loader", path: "../dotenv-loader"
 # gem "foobara-rack-connector", github: "rack-connector", branch: "main"
 # gem "foobara-rack-connector", path: "..-connector", branch: "main"
 # gem "foobara-redis-crud-driver", github: "foobara/redis-crud-driver"
@@ -33,6 +31,8 @@ end
 group :development, :test do
   gem "pry"
   gem "pry-byebug"
+  gem "foobara-dotenv-loader", github: "foobara/dotenv-loader"
+  # gem "foobara-dotenv-loader", path: "../dotenv-loader"
 end
 
 group :test do
