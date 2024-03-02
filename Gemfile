@@ -29,10 +29,10 @@ group :development do
 end
 
 group :development, :test do
-  gem "pry"
-  gem "pry-byebug"
   gem "foobara-dotenv-loader", github: "foobara/dotenv-loader"
   # gem "foobara-dotenv-loader", path: "../dotenv-loader"
+  gem "pry"
+  gem "pry-byebug"
 end
 
 group :test do
