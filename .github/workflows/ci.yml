@@ -38,7 +38,7 @@ jobs:
         env:
           cache-name: cache-foobara
         with:
-          path: ~/work/foobara-open-ai-api/foobara
+          path: ~/work/open-ai-api/foobara
           key: ${{ env.cache-name }}-${{ env.foobara_branch }}-${{ env.foobara_sha1 }}
           restore-keys: |
             ${{ env.cache-name }}-${{ env.foobara_branch }}-
@@ -69,9 +69,9 @@ jobs:
         run: |
           set -e
           mkdir -p .bundle
-          echo -e "---\nBUNDLE_LOCAL__FOOBARA: '/home/runner/work/foobara-open-ai-api/foobara'" > .bundle/config
+          echo -e "---\nBUNDLE_LOCAL__FOOBARA: '/home/runner/work/open-ai-api/foobara'" > .bundle/config
           mkdir ../../foobara
-          ln -s  ../../foobara-open-ai-api/foobara ../../foobara/foobara
+          ln -s  ../../open-ai-api/foobara ../../foobara/foobara
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
