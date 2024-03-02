@@ -6,6 +6,14 @@ require "pry"
 require "pry-byebug"
 require "rspec/its"
 require "simplecov"
+require "vcr"
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/vcr_cassettes"
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+  config.filter_sensitive_data("<OPEN_AI_KEY>") { ENV.fetch("OPENAI_API_KEY", nil) }
+end
 
 SimpleCov.start do
   # enable_coverage :branch
