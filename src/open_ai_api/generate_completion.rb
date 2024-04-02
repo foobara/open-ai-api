@@ -36,6 +36,10 @@ module Foobara
         self.request_headers = { "Content-Type" => "application/json", "Authorization" => "Bearer #{api_token}" }
       end
 
+      def api_token
+        inputs[:api_token] || ENV.fetch("OPENAI_API_KEY", nil)
+      end
+
       def issue_http_request
         url = URI.parse(URL)
         self.response = Net::HTTP.post(url, JSON.generate(request_body), request_headers)
