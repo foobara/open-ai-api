@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 10 Feb 2024 01:31:55 GMT
+      - Thu, 25 Apr 2024 00:02:42 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -39,11 +39,11 @@ http_interactions:
       Cache-Control:
       - no-cache, must-revalidate
       Openai-Model:
-      - gpt-3.5-turbo-0613
+      - gpt-3.5-turbo-0125
       Openai-Organization:
       - user-mocyfzfqtusxbnhm0zzkagsd
       Openai-Processing-Ms:
-      - '1072'
+      - '672'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -61,35 +61,35 @@ http_interactions:
       X-Ratelimit-Reset-Tokens:
       - 44ms
       X-Request-Id:
-      - req_e5411204c7bdb9ab702232fba9550d8b
+      - req_04853aecb284941e91a3afc52499f182
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=2lR1poh75M5e6ktHClKtgR1FRngjpQCqsLtATyDyp6c-1707528715-1-AWGbywOdrJPid0pz0rPEw25hnqVD7mqJCW1bwQ2V7c5pQxhhmxsotq2VTnDFqAg8kMirGTGP3tcJZ4AFZOUax5I=;
-        path=/; expires=Sat, 10-Feb-24 02:01:55 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=SU5DxiT7G0J7BSy.mYOzwoIvHiVl0NTWz0hTEkR6EEQ-1714003362-1.0.1.1-Lzne07j62XyreM_Bjg17Ps_e.q1TcirI6q49D0V_4Cla6wbbI2D0i0Af5hvt27y2wpidHZelJMqpdEfJGnxq8w;
+        path=/; expires=Thu, 25-Apr-24 00:32:42 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=6V52XylUCLBDMLvjBkH.88uRwMP6SzZ99NTt48Dkzbo-1707528715626-0-604800000;
+      - _cfuvid=8qUTW9HaFvoAp2AfhGADzr05ZXnNf_hrnfbDsbSafL0-1714003362633-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Server:
       - cloudflare
       Cf-Ray:
-      - 85309860c8867ae8-SJC
+      - 879a10d338be9645-SJC
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-8qWVeXbqgAdXxpTpvbMofifzE6Xqa",
+          "id": "chatcmpl-9HgrSec2YNdQcFS9nx4rRcIQPJpvm",
           "object": "chat.completion",
-          "created": 1707528714,
-          "model": "gpt-3.5-turbo-0613",
+          "created": 1714003362,
+          "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "The pH of honey typically ranges between 3.9 and 6.1."
+                "content": "The pH of honey is typically in the range of 3.2 to 4.5."
               },
               "logprobs": null,
               "finish_reason": "stop"
@@ -97,10 +97,10 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 33,
-            "completion_tokens": 17,
-            "total_tokens": 50
+            "completion_tokens": 20,
+            "total_tokens": 53
           },
-          "system_fingerprint": null
+          "system_fingerprint": "fp_c2295e73ad"
         }
-  recorded_at: Sat, 10 Feb 2024 01:31:55 GMT
+  recorded_at: Thu, 25 Apr 2024 00:02:42 GMT
 recorded_with: VCR 6.2.0
