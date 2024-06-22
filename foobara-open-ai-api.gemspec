@@ -1,4 +1,4 @@
-require_relative "src/version"
+require_relative "version"
 
 Gem::Specification.new do |spec|
   spec.name = "foobara-open-ai-api"
@@ -8,8 +8,12 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Foobara commands and models for OpenAI's API"
   spec.homepage = "https://github.com/foobara/open-ai-api"
-  spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.2.2"
+
+  # Equivalent to SPDX License Expression: Apache-2.0 OR MIT
+  spec.license = "Apache-2.0 OR MIT"
+  spec.licenses = ["Apache-2.0", "MIT"]
+
+  spec.required_ruby_version = ">= #{File.read("#{__dir__}/.ruby-version")}"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
@@ -20,7 +24,9 @@ Gem::Specification.new do |spec|
   spec.files = Dir[
     "lib/**/*",
     "src/**/*",
-    "LICENSE.txt"
+    "LICENSE*.txt",
+    "CHANGELOG.md",
+    "README.md",
   ]
 
   spec.require_paths = ["lib"]
