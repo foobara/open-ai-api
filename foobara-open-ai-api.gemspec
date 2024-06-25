@@ -29,6 +29,6 @@ Gem::Specification.new do |spec|
     "README.md",
   ]
 
-  spec.require_paths = ["lib"]
+  spec.require_paths = %w[lib src]
   spec.metadata["rubygems_mfa_required"] = "true"
 end
