@@ -1,3 +1,7 @@
+## [0.0.5] - 2025-02-16
+
+- Rename GenerateChatCompletion to CreateChatCompletion
+
 ## [0.0.4] - 2025-02-16
 
 - Rename GenerateCompletion to GenerateChatCompletion

@@ -1,7 +1,7 @@
 module Foobara
   module Ai
     module OpenAiApi
-      class GenerateChatCompletion < Foobara::Command
+      class CreateChatCompletion < Foobara::Command
         URL = "https://api.openai.com/v1/chat/completions".freeze
 
         inputs do
