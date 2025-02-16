@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-open-ai-api (0.0.5)
+    foobara-open-ai-api (0.0.6)
       foobara
 
 GEM
