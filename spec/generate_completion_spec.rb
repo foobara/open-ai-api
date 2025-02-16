@@ -1,4 +1,4 @@
-RSpec.describe Foobara::Ai::OpenAiApi::GenerateCompletion do
+RSpec.describe Foobara::Ai::OpenAiApi::GenerateChatCompletion do
   let(:inputs) do
     {
       api_token:,
