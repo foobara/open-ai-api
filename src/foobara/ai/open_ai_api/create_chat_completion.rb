@@ -15,7 +15,7 @@ module Foobara
           end
         end
 
-        result Types::Completion
+        result Types::ChatCompletion
 
         def execute
           build_request_body
@@ -60,7 +60,7 @@ module Foobara
         end
 
         def build_completion
-          self.completion = Types::Completion.new(response_body)
+          self.completion = Types::ChatCompletion.new(response_body)
         end
       end
     end
