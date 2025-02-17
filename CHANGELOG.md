@@ -3,6 +3,7 @@
 - Add support for some newly added fields
 - Make sure our models don't break when OpenAI adds new attributes to their responses
   before we have a chance to update them
+- Implement ListModels
 
 ## [0.0.6] - 2025-02-16
 
