@@ -4,18 +4,24 @@ module Foobara
   module Ai
     module OpenAiApi
       class BaseCommand < Foobara::Command
+        class << self
+          attr_accessor :api_token
+        end
+
         include HttpApiCommand
 
         base_url "https://api.openai.com/v1"
 
         inputs do
-          # TODO: come up with some kind of execution context object to wrap all of these calls upon which
-          # data wrapping a "request" can live instead of being passed around?
           api_token :string
         end
 
         def api_token
-          inputs[:api_token] || ENV.fetch("OPENAI_API_KEY", nil)
+          inputs[:api_token] || BaseCommand.api_token || api_token_from_env
+        end
+
+        def api_token_from_env
+          ENV.fetch("OPENAI_API_KEY", nil)
         end
 
         def build_request_headers
