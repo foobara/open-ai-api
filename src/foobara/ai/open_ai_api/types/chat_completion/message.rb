@@ -7,6 +7,7 @@ module Foobara
             attributes do
               role :string, one_of: %w[assistant user system]
               content :string
+              refusal :string, :allow_nil
             end
           end
         end

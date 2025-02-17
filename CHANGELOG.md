@@ -1,3 +1,9 @@
+## [0.0.7] - 2025-02-17
+
+- Add support for some newly added fields
+- Make sure our models don't break when OpenAI adds new attributes to their responses
+  before we have a chance to update them
+
 ## [0.0.6] - 2025-02-16
 
 - Rename Completion to ChatCompletion

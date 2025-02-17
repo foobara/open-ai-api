@@ -12,6 +12,7 @@ module Foobara
             system_fingerprint :string, :allow_nil
             choices [Choice]
             usage Usage
+            service_tier :string, :allow_nil, one_of: %w[auto default]
           end
         end
       end
