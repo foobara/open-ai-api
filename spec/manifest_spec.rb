@@ -26,7 +26,7 @@ RSpec.describe Foobara do
       expect(type_manifest[:domain]).to eq("Foobara::Ai::OpenAiApi")
       expect(type_manifest[:organization]).to eq("Foobara")
       expect(type_manifest[:parent]).to eq([:domain, "Foobara::Ai::OpenAiApi"])
-      expect(type_manifest[:name]).to eq("Foobara::Ai::OpenAiApi::Types::ChatCompletion::Message")
+      expect(type_manifest[:name]).to eq("Types::ChatCompletion::Message")
       expect(type_manifest[:model_class]).to eq("Foobara::Ai::OpenAiApi::Types::ChatCompletion::Message")
       expect(type_manifest[:model_name]).to eq("Types::ChatCompletion::Message")
       expect(type_manifest[:model_base_class]).to eq("Foobara::Model")

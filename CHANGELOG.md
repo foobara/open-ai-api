@@ -1,3 +1,7 @@
+## [0.0.9] - 2025-02-18
+
+- Add a ModelEnum
+
 ## [0.0.8] - 2025-02-17
 
 - Add support for some newly added fields
