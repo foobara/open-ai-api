@@ -5,6 +5,10 @@ ruby Foobara::OpenAiApi::MINIMUM_RUBY_VERSION
 
 gemspec
 
+# Uncomment these for debugging
+# gem "foobara", path: "../foobara"
+# gem "foobara-cached-command", path: "../cached-command"
+
 gem "rake"
 
 group :development do

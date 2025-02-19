@@ -1,7 +1,13 @@
+require "foobara/cached_command"
+
 module Foobara
   module Ai
     module OpenAiApi
       class ListModels < BaseCommand
+        include CachedCommand
+
+        self.foobara_cache_expiry = 24 * 60 * 60
+
         path "/models"
 
         result [Types::Model]
