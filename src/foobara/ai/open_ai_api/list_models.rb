@@ -4,10 +4,6 @@ module Foobara
       class ListModels < BaseCommand
         path "/models"
 
-        inputs do
-          api_token :string
-        end
-
         result [Types::Model]
 
         def build_result
