@@ -45,4 +45,7 @@ require "foobara/load_dotenv"
 Foobara::LoadDotenv.run!(env: "test")
 
 require "foobara/spec_helpers/all"
-require "foobara/open_ai_api"
+
+VCR.use_cassette("list_models", record: :none) do
+  require "foobara/open_ai_api"
+end

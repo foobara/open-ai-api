@@ -1,4 +1,9 @@
-## [0.0.9] - 2025-02-18
+## [0.0.11] - 2025-02-19
+
+- Cache the list of models in ListModels
+- Automatically construct the list of valid model names for model_enum at startup
+
+## [0.0.10] - 2025-02-18
 
 - Add a ModelEnum
 
