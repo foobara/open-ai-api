@@ -8,7 +8,7 @@ module Foobara
         http_method :post
 
         add_inputs do
-          model :model, default: Types::ModelEnum::GPT_3_5_TURBO
+          model :model_enum, default: Types::ModelEnum::GPT_3_5_TURBO
           messages :array do
             role :string, one_of: %w[system user assistant]
             content :string

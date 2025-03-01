@@ -8,7 +8,7 @@ module Foobara
 
         ModelEnum = Foobara::Enumerated.make_module(model_list)
 
-        OpenAiApi.foobara_register_type(:model, :string, one_of: ModelEnum)
+        OpenAiApi.foobara_register_type(:model_enum, :string, one_of: ModelEnum)
       end
     end
   end
