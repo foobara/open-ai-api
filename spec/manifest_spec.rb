@@ -8,8 +8,8 @@ RSpec.describe Foobara do
       )
       expect(Foobara::Ai::OpenAiApi::Types::ChatCompletion::Message.model_type).to be(type)
       expect(Foobara::Ai::OpenAiApi::Types::ChatCompletion::Message.domain).to be(Foobara::Ai::OpenAiApi)
-      expect(type.scoped_full_path).to eq(%w[Foobara Ai OpenAiApi Types ChatCompletion Message])
-      expect(type.scoped_path).to eq(%w[Types ChatCompletion Message])
+      expect(type.scoped_full_path).to eq(["Foobara", "Ai", "OpenAiApi", "Types", "ChatCompletion", "Message"])
+      expect(type.scoped_path).to eq(["Types", "ChatCompletion", "Message"])
       expect(type.foobara_domain).to be(Foobara::Ai::OpenAiApi)
       # TODO: why not Foobara::Ai::OpenAiApi::Types::ChatCompletion? I guess because it's a model class and not a type?
       expect(type.scoped_namespace).to be(Foobara::Ai::OpenAiApi)
@@ -18,10 +18,11 @@ RSpec.describe Foobara do
 
       expect(type_manifest).to be_a(Hash)
 
-      expect(type_manifest[:scoped_path]).to eq(%w[Types ChatCompletion Message])
+      expect(type_manifest[:scoped_path]).to eq(["Types", "ChatCompletion", "Message"])
       expect(type_manifest[:scoped_name]).to eq("Types::ChatCompletion::Message")
-      expect(type_manifest[:scoped_prefix]).to eq(%w[Types ChatCompletion])
-      expect(type_manifest[:scoped_full_path]).to eq(%w[Foobara Ai OpenAiApi Types ChatCompletion Message])
+      expect(type_manifest[:scoped_prefix]).to eq(["Types", "ChatCompletion"])
+      expect(type_manifest[:scoped_full_path]).to eq(["Foobara", "Ai", "OpenAiApi", "Types", "ChatCompletion",
+                                                      "Message"])
       expect(type_manifest[:reference]).to eq("Foobara::Ai::OpenAiApi::Types::ChatCompletion::Message")
       expect(type_manifest[:domain]).to eq("Foobara::Ai::OpenAiApi")
       expect(type_manifest[:organization]).to eq("Foobara")

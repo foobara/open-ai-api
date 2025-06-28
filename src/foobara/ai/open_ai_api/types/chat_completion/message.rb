@@ -5,7 +5,7 @@ module Foobara
         class ChatCompletion < Foobara::Model
           class Message < Foobara::Model
             attributes do
-              role :string, one_of: %w[assistant user system]
+              role :string, one_of: ["assistant", "user", "system"]
               content :string
               refusal :string, :allow_nil
             end

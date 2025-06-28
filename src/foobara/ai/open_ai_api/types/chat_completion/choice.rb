@@ -8,7 +8,7 @@ module Foobara
               index :integer
               message Message
               logprobs :duck # what is this? null in documentation
-              finish_reason :string, one_of: %w[stop] # what are the real values here?
+              finish_reason :string, one_of: ["stop"] # what are the real values here?
             end
           end
         end

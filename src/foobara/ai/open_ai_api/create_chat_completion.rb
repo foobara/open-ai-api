@@ -10,15 +10,16 @@ module Foobara
         add_inputs do
           model :model_enum, default: Types::ModelEnum::GPT_3_5_TURBO
           messages :array do
-            role :string, one_of: %w[system user assistant]
+            role :string, one_of: ["system", "user", "assistant"]
             content :string
           end
+          temperature :float
         end
 
         result Types::ChatCompletion
 
         def build_request_body
-          self.request_body = { model:, messages: }
+          self.request_body = { model:, messages:, temperature: }
         end
 
         def build_result

@@ -27,9 +27,9 @@ Gem::Specification.new do |spec|
     "src/**/*",
     "LICENSE*.txt",
     "CHANGELOG.md",
-    "README.md",
+    "README.md"
   ]
 
-  spec.require_paths = %w[lib src]
+  spec.require_paths = ["lib", "src"]
   spec.metadata["rubygems_mfa_required"] = "true"
 end
