@@ -1,4 +1,8 @@
-## [0.0.13] - 2025-03-01
+## [1.0.0] - 2025-07-08
+
+- Retry with incremental/exponential backoff for 529s and 429s
+
+## [0.0.13] - 2025-06-27
 
 - Add temperature to CreateChatCompletion inputs
 

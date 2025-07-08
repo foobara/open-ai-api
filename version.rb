@@ -1,6 +1,6 @@
 module Foobara
   module OpenAiApi
-    VERSION = "0.0.13".freeze
+    VERSION = "1.0.0".freeze
     MINIMUM_RUBY_VERSION = ">= 3.4.0".freeze
   end
 end

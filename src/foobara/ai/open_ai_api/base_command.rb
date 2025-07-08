@@ -27,6 +27,27 @@ module Foobara
         def build_request_headers
           self.request_headers = { "Content-Type" => "application/json", "Authorization" => "Bearer #{api_token}" }
         end
+
+        def issue_http_request(failures = 0)
+          super()
+
+          return if failures > 6
+
+          case response.code
+          when "429"
+            # :nocov:
+            sleep 2 ** failures
+            issue_http_request(failures + 1)
+            # :nocov:
+          when "529"
+            # Do these even happen with openai? or only anthropic?
+            # :nocov:
+            failures += 1
+            sleep failures
+            issue_http_request(failures)
+            # :nocov:
+          end
+        end
       end
     end
   end
