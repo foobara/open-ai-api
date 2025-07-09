@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    foobara-open-ai-api (1.0.0)
+    foobara-open-ai-api (1.0.1)
       foobara-cached-command
       foobara-http-api-command
 

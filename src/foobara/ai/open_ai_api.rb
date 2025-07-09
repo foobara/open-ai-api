@@ -14,6 +14,10 @@ module Foobara
         def api_token
           BaseCommand.api_token
         end
+
+        def default_llm_model
+          :"chatgpt-4o-latest"
+        end
       end
     end
   end
