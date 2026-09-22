@@ -15,7 +15,13 @@ module Foobara
         result [Types::Model]
 
         def build_result
-          response_body["data"]
+          response_body["data"].map do |model_attributes|
+            Types::Model.new(
+              model_attributes,
+              # Set to false and run test suite with new cassettes if trying to find new attributes
+              ignore_unexpected_attributes: true
+            )
+          end
         end
       end
     end

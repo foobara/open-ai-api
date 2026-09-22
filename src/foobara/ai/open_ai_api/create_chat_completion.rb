@@ -23,7 +23,11 @@ module Foobara
         end
 
         def build_result
-          Types::ChatCompletion.new(response_body, ignore_unexpected_attributes: true)
+          Types::ChatCompletion.new(
+            response_body,
+            # Set to false and run test suite with new cassettes if trying to find new attributes
+            ignore_unexpected_attributes: true
+          )
         end
       end
     end

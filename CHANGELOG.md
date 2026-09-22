@@ -1,3 +1,7 @@
+## [1.0.2] - 2026-09-21
+
+- Fix breakages caused by new attributes and prevent future new attributes from breaking things
+
 ## [1.0.1] - 2025-07-09
 
 - Add .default_llm_model

@@ -8,6 +8,7 @@ module Foobara
             created :datetime
             object :string
             owned_by :string
+            shutdown_date :date, :allow_nil
           end
         end
       end
