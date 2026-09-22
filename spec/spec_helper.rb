@@ -8,22 +8,11 @@ require "rspec/its"
 require "simplecov"
 require "vcr"
 
-VCR.configure do |config|
-  config.filter_sensitive_data("<OPEN_AI_KEY>") { ENV["OPENAI_API_KEY"] }
+require "foobara/load_dotenv"
 
-  config.before_record do |interaction|
-    if interaction.request.headers["Cookie"]
-      interaction.request.headers["Cookie"] = ["<SCRUBBED>"]
-    end
-    if interaction.response.headers["Set-Cookie"]
-      interaction.response.headers["Set-Cookie"] = ["<SCRUBBED>"]
-    end
-  end
+Foobara::LoadDotenv.run!(env: "test")
 
-  config.cassette_library_dir = "spec/vcr_cassettes"
-  config.hook_into :webmock
-  config.configure_rspec_metadata!
-end
+Warning[:deprecated] = true
 
 SimpleCov.start do
   # enable_coverage :branch
@@ -50,12 +39,18 @@ RSpec.configure do |config|
   # config.raise_errors_for_deprecations!
 end
 
-require "foobara/load_dotenv"
-
-Foobara::LoadDotenv.run!(env: "test")
-
 require "foobara/spec_helpers/all"
 
+Dir["#{__dir__}/support/**/*.rb"].each { |f| require f }
+
+# To rerecord this cassette:
+# 1. delete list_models.yml
+# 2. delete tmp/ (to clear out cached command results)
+# 3. change record: :none to record: :once
+# 4. uncomment the raise below
+# 5. run the test suite
+# 6. undo 3 and 4.
 VCR.use_cassette("list_models", record: :none) do
   require "foobara/open_ai_api"
 end
+# raise "Just rerecording the list_models cassette, no need to proceed"
