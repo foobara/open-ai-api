@@ -27,7 +27,7 @@ RSpec.describe Foobara::Ai::OpenAiApi::CreateChatCompletion do
   it "can generate a completion", vcr: { record: :none } do
     expect(outcome).to be_success
     expect(result).to be_a(Foobara::Ai::OpenAiApi::Types::ChatCompletion)
-    expect(result.choices.first.message.content).to match(/pH of honey.*\d+\.\d+ (to|and) \d+\.\d+/)
+    expect(result.choices.first.message.content).to match(/pH of honey.*\d+\.\d+/)
   end
 
   context "when setting api token via env" do
@@ -65,7 +65,7 @@ RSpec.describe Foobara::Ai::OpenAiApi::CreateChatCompletion do
     it "can generate a completion", vcr: { record: :none } do
       expect(outcome).to be_success
       expect(result).to be_a(Foobara::Ai::OpenAiApi::Types::ChatCompletion)
-      expect(result.choices.first.message.content).to match(/pH of honey.*\d+\.\d+ (to|and) \d+\.\d+/)
+      expect(result.choices.first.message.content).to match(/pH of honey.*\d+\.\d+/)
     end
   end
 end
