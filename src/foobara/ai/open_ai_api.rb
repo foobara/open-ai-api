@@ -16,7 +16,7 @@ module Foobara
         end
 
         def default_llm_model
-          :"chatgpt-4o-latest"
+          :"gpt-4o"
         end
       end
     end
